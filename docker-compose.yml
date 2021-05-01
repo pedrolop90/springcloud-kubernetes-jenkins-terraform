@@ -1,0 +1,57 @@
+version: '3'
+
+services:
+  persona-testing:
+    build:
+      context: ./persona
+      dockerfile: Dockerfile
+    image: persona-testing:1.0
+    ports:
+      - 9010:9010
+    depends_on:
+      - eureka
+      - config
+      - zuul
+  eureka:
+    build:
+      context: ./eureka
+      dockerfile: Dockerfile
+    image: eureka:1.0
+    ports:
+      - 8761:8761
+  zuul:
+    build:
+      context: ./zuul
+      dockerfile: Dockerfile
+    image: zuul:1.0
+    ports:
+      - 8000:8000
+    depends_on:
+      - config
+  config:
+    build:
+      context: ./config
+      dockerfile: Dockerfile
+    image: config:1.0
+    ports:
+      - 8888:8888
+  zipkin:
+    build:
+      context: ./zipkin
+      dockerfile: Dockerfile
+    image: zipkin:1.0
+    ports:
+      - 9411:9411
+    depends_on:
+      - elastic-search
+  zipkin-pre:
+    image: openzipkin/zipkin:latest
+    ports:
+      - 9411:9411
+  elastic-search:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.12.1
+    environment:
+      - discovery.type=single-node
+    ports:
+      - 9300:9300
+      - 9200:9200

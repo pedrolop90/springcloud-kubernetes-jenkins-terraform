@@ -1,0 +1,32 @@
+plugins {
+    id 'org.springframework.boot' version '2.3.8.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'java'
+}
+
+group 'com.testing.springcloud:common'
+version '1.0-SNAPSHOT'
+sourceCompatibility = '11'
+targetCompatibility = '11'
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    compileOnly 'org.projectlombok:lombok:1.18.16'
+    annotationProcessor 'org.projectlombok:lombok:1.18.16'
+
+    implementation 'org.mapstruct:mapstruct:1.4.2.Final'
+    annotationProcessor 'org.mapstruct:mapstruct-processor:1.4.2.Final'
+
+    //springboot
+    implementation 'org.springframework.boot:spring-boot-starter-web:2.3.8.RELEASE'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa:2.3.8.RELEASE'
+    implementation 'org.springframework.boot:spring-boot-starter-validation:2.3.8.RELEASE'
+}
+
+test {
+    useJUnitPlatform()
+}

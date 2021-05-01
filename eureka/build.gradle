@@ -1,0 +1,42 @@
+plugins {
+    id 'org.springframework.boot' version '2.3.8.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'application'
+}
+
+group 'com.testing.springcloud:eureka'
+version '1.0-SNAPSHOT'
+sourceCompatibility = '11'
+targetCompatibility = '11'
+
+ext {
+    set('springCloudVersion', "Hoxton.SR8")
+    set('nombreClase', 'com.testing.springcloud.eureka.EurekaApplication')
+}
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    compileOnly 'org.projectlombok:lombok:1.18.16'
+    annotationProcessor 'org.projectlombok:lombok:1.18.16'
+
+    //spring-cloud
+    implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-server:2.2.8.RELEASE'
+}
+
+mainClassName = project.ext.nombreClase
+
+apply plugin: "io.spring.dependency-management"
+
+dependencyManagement {
+    imports {
+        mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+    }
+}
+
+test {
+    useJUnitPlatform()
+}

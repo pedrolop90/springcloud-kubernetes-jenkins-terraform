@@ -1,0 +1,2 @@
+com/testing/springcloud/config/ConfigApplication.java
+ com.testing.springcloud.config.ConfigApplication

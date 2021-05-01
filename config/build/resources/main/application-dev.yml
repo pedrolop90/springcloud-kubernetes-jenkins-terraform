@@ -1,0 +1,11 @@
+server:
+  port: 8888
+
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/pedrolop90/testing-springboot-config.git
+          default-label: develop
+          force-pull: true

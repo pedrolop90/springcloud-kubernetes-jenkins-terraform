@@ -1,0 +1,9 @@
+rootProject.name = 'SpringCloud-Testing'
+include 'eureka'
+include 'persona'
+include 'zuul'
+include 'config'
+include 'zipkin'
+include 'common'
+include 'hystrix'
+

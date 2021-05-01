@@ -1,0 +1,22 @@
+server:
+  port: 9411
+
+#zipkin:
+#  storage:
+#    type: elasticsearch
+#    elasticsearch:
+#      cluster: elasticsearch
+#      hosts: localhost:9300
+#      index: zipkin
+#      index-shards: 5
+#      index-replicas: 1
+
+#spring:
+#  cloud:
+#    config:
+#      discovery:
+#        enabled: true
+#        service-id: config
+#      name: zipkin
+#      password: 123456
+#      username: zipkin
