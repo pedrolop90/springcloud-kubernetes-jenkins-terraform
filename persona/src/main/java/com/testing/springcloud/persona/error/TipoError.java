@@ -1,6 +1,6 @@
 package com.testing.springcloud.persona.error;
 
-import com.testing.springcloud.persona.error.procesar.ProcesarErrorMethodArgumentNotValidException;
+import com.testing.springcloud.persona.error.procesar.procesarErrorValidacion;
 import com.testing.springcloud.persona.error.procesar.ProcesarErrorSistema;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -13,7 +13,7 @@ public enum TipoError {
 
 	METHOD_ARGUMENT_NOTVALIDATIONEXCEPTION(
 			MethodArgumentNotValidException.class.getSimpleName(),
-			new ProcesarErrorMethodArgumentNotValidException(),
+			new procesarErrorValidacion(),
 			HttpStatus.BAD_REQUEST
 	),
 	SISTEMA(

@@ -1,6 +1,6 @@
 package com.testing.springcloud.common.servicio.impl;
 
-import com.testing.springcloud.common.conversion.ConversionBase;
+import com.testing.springcloud.common.convertidor.ConvertidorBase;
 import com.testing.springcloud.common.dto.IdEntidad;
 import com.testing.springcloud.common.dto.Modelo;
 import com.testing.springcloud.common.servicio.ServicioBase;
@@ -84,6 +84,6 @@ public abstract class ServicioBaseImpl<ID, MODELO extends Modelo<ID>, ENTIDAD ex
 
 	protected abstract CrudRepository<ENTIDAD, ID> obtenerRepositorio();
 
-	protected abstract ConversionBase<MODELO, ENTIDAD> obtenerConversionBase();
+	protected abstract ConvertidorBase<MODELO, ENTIDAD> obtenerConversionBase();
 
 }

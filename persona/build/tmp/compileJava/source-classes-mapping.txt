@@ -1,26 +1,28 @@
 com/testing/springcloud/persona/error/procesar/ProcesarErrorSistema.java
  com.testing.springcloud.persona.error.procesar.ProcesarErrorSistema
-com/testing/springcloud/persona/error/procesar/BaseResponse.java
- com.testing.springcloud.persona.error.procesar.BaseResponse
 com/testing/springcloud/persona/controlador/PersonaControlador.java
  com.testing.springcloud.persona.controlador.PersonaControlador
-com/testing/springcloud/persona/comando/PersonaComando.java
- com.testing.springcloud.persona.comando.PersonaComando
-com/testing/springcloud/persona/configuracion/Swagger.java
- com.testing.springcloud.persona.configuracion.Swagger
-com/testing/springcloud/persona/error/Error.java
- com.testing.springcloud.persona.error.Error
+com/testing/springcloud/persona/entidad/PersonaEntidad.java
+ com.testing.springcloud.persona.entidad.PersonaEntidad
+com/testing/springcloud/persona/error/procesar/procesarErrorValidacion.java
+ com.testing.springcloud.persona.error.procesar.procesarErrorValidacion
 com/testing/springcloud/persona/PersonaApplication.java
  com.testing.springcloud.persona.PersonaApplication
+com/testing/springcloud/persona/servicio/PersonaServicio.java
+ com.testing.springcloud.persona.servicio.PersonaServicio
+com/testing/springcloud/persona/configuracion/SwaggerConfiguracion.java
+ com.testing.springcloud.persona.configuracion.SwaggerConfiguracion
 com/testing/springcloud/persona/error/TipoError.java
  com.testing.springcloud.persona.error.TipoError
-com/testing/springcloud/persona/error/procesar/ValidationErrorResponse.java
- com.testing.springcloud.persona.error.procesar.ValidationErrorResponse
-com/testing/springcloud/persona/error/procesar/ValidationError.java
- com.testing.springcloud.persona.error.procesar.ValidationError
+com/testing/springcloud/persona/convertidor/PersonaModeloToPersonaEntidadConvertidor.java
+ com.testing.springcloud.persona.convertidor.PersonaModeloToPersonaEntidadConvertidor
+com/testing/springcloud/persona/modelo/PersonaModelo.java
+ com.testing.springcloud.persona.modelo.PersonaModelo
+com/testing/springcloud/persona/servicio/impl/PersonaServicioImpl.java
+ com.testing.springcloud.persona.servicio.impl.PersonaServicioImpl
 com/testing/springcloud/persona/error/ProcesarError.java
  com.testing.springcloud.persona.error.ProcesarError
 com/testing/springcloud/persona/error/ManejadorError.java
  com.testing.springcloud.persona.error.ManejadorError
-com/testing/springcloud/persona/error/procesar/ProcesarErrorMethodArgumentNotValidException.java
- com.testing.springcloud.persona.error.procesar.ProcesarErrorMethodArgumentNotValidException
+com/testing/springcloud/persona/repositorio/PersonaRepositorio.java
+ com.testing.springcloud.persona.repositorio.PersonaRepositorio

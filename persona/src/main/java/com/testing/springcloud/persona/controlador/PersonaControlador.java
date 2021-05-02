@@ -1,28 +1,22 @@
 package com.testing.springcloud.persona.controlador;
 
-import com.testing.springcloud.persona.comando.PersonaComando;
+import com.testing.springcloud.common.controlador.ControladorBaseImpl;
+import com.testing.springcloud.persona.entidad.PersonaEntidad;
+import com.testing.springcloud.persona.modelo.PersonaModelo;
+import com.testing.springcloud.persona.servicio.PersonaServicio;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import javax.validation.Valid;
 
 @RestController
 @RequestMapping(value = "personas")
 @RequiredArgsConstructor
-public class PersonaControlador {
+public class PersonaControlador extends ControladorBaseImpl<Long, PersonaModelo, PersonaEntidad> {
 
-	@GetMapping
-	public String obtenerSaludo() {
-		return "hola....";
+	private final PersonaServicio personaServicio;
+
+	@Override
+	public PersonaServicio obtenerServicio() {
+		return personaServicio;
 	}
-
-	@PostMapping
-	public String guardarSaludo(@RequestBody @Valid PersonaComando personaComando) {
-		return "sapo....";
-	}
-
 }

@@ -1,11 +1,11 @@
-package com.testing.springcloud.common.conversion;
+package com.testing.springcloud.common.convertidor;
 
 import org.mapstruct.IterableMapping;
 import org.mapstruct.Named;
 
 import java.util.stream.Stream;
 
-public interface ConversionBase<LEFT, RIGHT> {
+public interface ConvertidorBase<LEFT, RIGHT> {
 	@Named("leftToRight")
 	RIGHT leftToRight(LEFT left);
 

@@ -1,4 +1,4 @@
-version: '3'
+version: '3.7'
 
 services:
   persona-testing:
@@ -35,6 +35,13 @@ services:
     image: config:1.0
     ports:
       - 8888:8888
+  admin:
+    build:
+      context: ./admin
+      dockerfile: Dockerfile
+    image: admin:1.0
+    ports:
+      - 8084:8084
   zipkin:
     build:
       context: ./zipkin

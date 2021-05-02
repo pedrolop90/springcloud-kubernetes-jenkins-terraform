@@ -5,6 +5,7 @@ FROM ${BUILD_IMAGE} as dependencies
 ENV APP_HOME=/
 WORKDIR $APP_HOME
 
+#config-server
 COPY build.gradle settings.gradle $APP_HOME
 ADD src $APP_HOME/src
 RUN gradle build

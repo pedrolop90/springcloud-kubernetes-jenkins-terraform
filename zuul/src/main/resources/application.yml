@@ -4,3 +4,7 @@ spring:
       percentage: 1.0
   zipkin:
     baseUrl: http://localhost:9411
+  boot:
+    admin:
+      client:
+        url: http://localhost:8084

@@ -13,10 +13,8 @@ public class ManejadorError {
 	public final ResponseEntity<Object> handlerException(Exception ex) {
 		ResponseEntity<Object> resultado;
 		TipoError tipoError = TipoError.capturarError(ex);
-		String excepcionNombre = tipoError.getNombreClase();
 		Object mensaje = tipoError.getProcesar().procesar(ex);
 
-		//Error error = new Error(excepcionNombre, mensaje);
 		resultado = new ResponseEntity<>(mensaje, tipoError.getEstado());
 		return resultado;
 	}

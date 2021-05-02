@@ -4,7 +4,7 @@ import com.testing.springcloud.persona.error.ProcesarError;
 
 public class ProcesarErrorSistema implements ProcesarError {
 	@Override
-	public Object procesar(Exception e) {
-		return e.getMessage();
+	public Object procesar(Exception excepcion) {
+		return excepcion.getMessage();
 	}
 }

@@ -5,5 +5,8 @@ spring:
     active: dev
   cloud:
     config:
+      retry:
+        maxAttempts: 200
+        maxInterval: 10000
       uri: http://localhost:8888
 
