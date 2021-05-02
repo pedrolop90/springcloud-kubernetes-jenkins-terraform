@@ -43,15 +43,6 @@ services:
     ports:
       - 8084:8084
   zipkin:
-    build:
-      context: ./zipkin
-      dockerfile: Dockerfile
-    image: zipkin:1.0
-    ports:
-      - 9411:9411
-    depends_on:
-      - elastic-search
-  zipkin-pre:
     image: openzipkin/zipkin:latest
     ports:
       - 9411:9411
