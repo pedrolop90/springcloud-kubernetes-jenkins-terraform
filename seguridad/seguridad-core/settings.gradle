@@ -1,0 +1,4 @@
+rootProject.name = 'seguridad-core'
+
+include ':common'
+project(':common').projectDir = new File('../../common')

@@ -11,6 +11,9 @@ import org.springframework.http.HttpStatus;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 
+/**
+ * @author Pedro Lopez
+ */
 @Getter
 @Setter
 @AllArgsConstructor

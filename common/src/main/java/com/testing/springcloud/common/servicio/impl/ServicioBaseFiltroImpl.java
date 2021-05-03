@@ -12,6 +12,9 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+/**
+ * @author Pedro Lopez
+ */
 public abstract class ServicioBaseFiltroImpl<ID, MODELO extends Modelo<ID>, ENTIDAD extends IdEntidad<ID>, FILTRO extends FiltroBase>
 		implements ServicioBaseFiltro<ID, MODELO, FILTRO> {
 

@@ -10,3 +10,9 @@ spring:
         maxInterval: 10000
       uri: http://localhost:8888
 
+#proxy:
+#  auth:
+#    routes:
+#      customers: oauth2
+#      stores: passthru
+#      recommendations: none

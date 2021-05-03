@@ -10,6 +10,9 @@ import org.springframework.data.annotation.LastModifiedDate;
 import javax.persistence.Column;
 import java.time.LocalDateTime;
 
+/**
+ * @author Pedro Lopez
+ */
 @Data
 public abstract class AuditoriaEntidad<ID> implements IdEntidad<ID> {
 

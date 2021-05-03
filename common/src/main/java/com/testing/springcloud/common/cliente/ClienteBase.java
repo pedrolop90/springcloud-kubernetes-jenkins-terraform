@@ -2,7 +2,7 @@ package com.testing.springcloud.common.cliente;
 
 import com.testing.springcloud.common.dto.Modelo;
 import com.testing.springcloud.common.respuesta.ListaObjetoRespuesta;
-import com.testing.springcloud.common.respuesta.ObjectoRespuesta;
+import com.testing.springcloud.common.respuesta.ObjetoRespuesta;
 import com.testing.springcloud.common.respuesta.RespuestaBase;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,10 +11,13 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
+/**
+ * @author Pedro Lopez
+ */
 public interface ClienteBase<ID, MODELO extends Modelo<ID>> {
 
 	@PostMapping
-	ObjectoRespuesta<MODELO> guardar(@RequestBody MODELO modelo);
+	ObjetoRespuesta<MODELO> guardar(@RequestBody MODELO modelo);
 
 	@PostMapping("/batch")
 	ListaObjetoRespuesta<MODELO> guardar(@RequestBody Iterable<MODELO> modelo);
@@ -32,7 +35,7 @@ public interface ClienteBase<ID, MODELO extends Modelo<ID>> {
 	RespuestaBase eliminarPorId(@RequestBody Iterable<ID> id);
 
 	@GetMapping("/{id}")
-	ObjectoRespuesta<MODELO> buscarPorId(@PathVariable("id") ID id);
+	ObjetoRespuesta<MODELO> buscarPorId(@PathVariable("id") ID id);
 
 	@GetMapping
 	ListaObjetoRespuesta<MODELO> buscarTodo();

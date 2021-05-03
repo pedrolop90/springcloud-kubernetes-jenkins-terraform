@@ -10,6 +10,9 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.java.Log;
 import org.springframework.stereotype.Service;
 
+/**
+ * @author Pedro Lopez
+ */
 @Service
 @Log
 @RequiredArgsConstructor

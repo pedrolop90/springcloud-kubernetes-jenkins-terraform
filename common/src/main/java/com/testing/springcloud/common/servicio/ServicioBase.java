@@ -4,6 +4,9 @@ import com.testing.springcloud.common.dto.Modelo;
 
 import java.util.stream.Stream;
 
+/**
+ * @author Pedro Lopez
+ */
 public interface ServicioBase<ID, MODELO extends Modelo<ID>> {
 
 	MODELO guardar(MODELO modelo);

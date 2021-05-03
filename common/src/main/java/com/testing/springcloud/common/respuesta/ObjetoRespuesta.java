@@ -10,28 +10,31 @@ import org.springframework.http.HttpStatus;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 
+/**
+ * @author Pedro Lopez
+ */
 @Getter
 @Setter
 @NoArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class ObjectoRespuesta<T> extends RespuestaBase implements Serializable {
+public class ObjetoRespuesta<T> extends RespuestaBase implements Serializable {
 	private T dato;
 
-	public ObjectoRespuesta(T dato) {
+	public ObjetoRespuesta(T dato) {
 		this(HttpStatus.OK, dato);
 	}
 
-	public ObjectoRespuesta(String mensaje, T dato) {
+	public ObjetoRespuesta(String mensaje, T dato) {
 		super(true, HttpStatus.OK, mensaje);
 		this.dato = dato;
 	}
 
-	public ObjectoRespuesta(@NotNull HttpStatus status, T dato) {
+	public ObjetoRespuesta(@NotNull HttpStatus status, T dato) {
 		super(true, status, status.getReasonPhrase());
 		this.dato = dato;
 	}
 
-	public ObjectoRespuesta(HttpStatus status, String mensaje, T dato) {
+	public ObjetoRespuesta(HttpStatus status, String mensaje, T dato) {
 		super(true, status, mensaje);
 		this.dato = dato;
 	}

@@ -1,0 +1,23 @@
+plugins {
+    id 'application'
+}
+
+group 'com.testing.springcloud:seguridad'
+version '1.0-SNAPSHOT'
+sourceCompatibility = '11'
+targetCompatibility = '11'
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    implementation project(':seguridad:seguridad-api')
+    implementation project(':seguridad:seguridad-core')
+    implementation project(':seguridad:seguridad-client')
+}
+
+test {
+    useJUnitPlatform()
+}

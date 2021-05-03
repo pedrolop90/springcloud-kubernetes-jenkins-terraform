@@ -1,0 +1,5 @@
+rootProject.name = 'seguridad-client'
+
+include ':seguridad:seguridad-core'
+
+project(':seguridad:seguridad-core').projectDir = new File('../seguridad-core')

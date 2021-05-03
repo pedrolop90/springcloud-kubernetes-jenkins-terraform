@@ -1,5 +1,8 @@
 package com.testing.springcloud.archivo.interceptor.http;
 
+/**
+ * @author Pedro Lopez
+ */
 public class UsuarioSesion {
 
 	private static ThreadLocal<String> USUARIO_SESION = new ThreadLocal<>();

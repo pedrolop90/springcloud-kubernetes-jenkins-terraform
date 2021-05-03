@@ -53,6 +53,13 @@ services:
     image: admin:1.0
     ports:
       - 8084:8084
+  seguridad:
+    build:
+      context: ./seguridad/seguridad-api
+      dockerfile: Dockerfile
+    image: seguridad:1.0
+    ports:
+      - 8090:8090
   zipkin:
     image: openzipkin/zipkin:latest
     ports:

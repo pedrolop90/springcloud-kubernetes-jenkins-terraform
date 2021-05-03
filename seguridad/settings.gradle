@@ -1,0 +1,12 @@
+rootProject.name = 'seguridad'
+
+include ':common'
+project(':common').projectDir = new File('../common')
+
+include ':seguridad:seguridad-api'
+include ':seguridad:seguridad-core'
+include ':seguridad:seguridad-client'
+
+project(':seguridad:seguridad-api').projectDir = new File('./seguridad-api')
+project(':seguridad:seguridad-core').projectDir = new File('./seguridad-core')
+project(':seguridad:seguridad-client').projectDir = new File('./seguridad-client')

@@ -13,6 +13,9 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import java.time.LocalDate;
 
+/**
+ * @author Pedro Lopez
+ */
 @Entity
 @Table(name = "PERSONA")
 @EntityListeners(AuditingEntityListener.class)

@@ -5,6 +5,9 @@ import com.testing.springcloud.common.filtro.FiltroBase;
 
 import java.util.stream.Stream;
 
+/**
+ * @author Pedro Lopez
+ */
 public interface ServicioBaseFiltro<ID, MODELO extends Modelo<ID>, FILTRO extends FiltroBase> {
 
 	MODELO guardar(MODELO modelo);

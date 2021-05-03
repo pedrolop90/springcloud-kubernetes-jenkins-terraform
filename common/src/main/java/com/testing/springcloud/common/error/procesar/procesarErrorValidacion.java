@@ -1,8 +1,8 @@
-package com.testing.springcloud.persona.error.procesar;
+package com.testing.springcloud.common.error.procesar;
 
+import com.testing.springcloud.common.error.ProcesarError;
 import com.testing.springcloud.common.respuesta.ErrorValidacion;
 import com.testing.springcloud.common.respuesta.ErrorValidacionRespuesta;
-import com.testing.springcloud.persona.error.ProcesarError;
 import org.springframework.validation.FieldError;
 import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
@@ -10,6 +10,9 @@ import org.springframework.web.bind.MethodArgumentNotValidException;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * @author Pedro Lopez
+ */
 public class procesarErrorValidacion implements ProcesarError {
 	@Override
 	public Object procesar(Exception excepcion) {

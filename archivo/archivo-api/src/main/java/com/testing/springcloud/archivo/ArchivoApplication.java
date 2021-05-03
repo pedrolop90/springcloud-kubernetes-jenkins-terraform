@@ -9,12 +9,15 @@ import org.springframework.cloud.netflix.hystrix.EnableHystrix;
 import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
+/**
+ * @author Pedro Lopez
+ */
 @SpringBootApplication
 @EnableEurekaClient
 @EnableHystrix
 @EnableHystrixDashboard
 @EnableDiscoveryClient
-@EnableFeignClients
+@EnableFeignClients(basePackages = {})
 @RefreshScope
 public class ArchivoApplication {
 	public static void main(String[] args) {

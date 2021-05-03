@@ -4,6 +4,9 @@ import com.testing.springcloud.archivo.modelo.ArchivoModelo;
 import com.testing.springcloud.common.cliente.ClienteBase;
 import org.springframework.cloud.openfeign.FeignClient;
 
+/**
+ * @author Pedro Lopez
+ */
 @FeignClient(value = "archivo-testing", path = "archivos")
 public interface ArchivoClient extends ClienteBase<String, ArchivoModelo> {
 }

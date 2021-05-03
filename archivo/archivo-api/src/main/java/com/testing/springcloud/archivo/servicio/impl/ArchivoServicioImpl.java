@@ -9,6 +9,9 @@ import com.testing.springcloud.common.servicio.impl.ServicioBaseImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+/**
+ * @author Pedro Lopez
+ */
 @Service
 @RequiredArgsConstructor
 public class ArchivoServicioImpl extends ServicioBaseImpl<String, ArchivoModelo, ArchivoEntidad>

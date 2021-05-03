@@ -1,12 +1,16 @@
 package com.testing.springcloud.persona.error;
 
-import com.testing.springcloud.persona.error.procesar.procesarErrorValidacion;
-import com.testing.springcloud.persona.error.procesar.ProcesarErrorSistema;
+import com.testing.springcloud.common.error.ProcesarError;
+import com.testing.springcloud.common.error.procesar.ProcesarErrorSistema;
+import com.testing.springcloud.common.error.procesar.procesarErrorValidacion;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 
+/**
+ * @author Pedro Lopez
+ */
 @Getter
 @AllArgsConstructor
 public enum TipoError {

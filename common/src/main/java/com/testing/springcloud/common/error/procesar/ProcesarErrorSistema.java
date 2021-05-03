@@ -1,7 +1,11 @@
-package com.testing.springcloud.persona.error.procesar;
+package com.testing.springcloud.common.error.procesar;
 
-import com.testing.springcloud.persona.error.ProcesarError;
 
+import com.testing.springcloud.common.error.ProcesarError;
+
+/**
+ * @author Pedro Lopez
+ */
 public class ProcesarErrorSistema implements ProcesarError {
 	@Override
 	public Object procesar(Exception excepcion) {

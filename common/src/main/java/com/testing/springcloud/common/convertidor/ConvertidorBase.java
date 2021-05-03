@@ -5,6 +5,9 @@ import org.mapstruct.Named;
 
 import java.util.stream.Stream;
 
+/**
+ * @author Pedro Lopez
+ */
 public interface ConvertidorBase<LEFT, RIGHT> {
 	@Named("leftToRight")
 	RIGHT leftToRight(LEFT left);

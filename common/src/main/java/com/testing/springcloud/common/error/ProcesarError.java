@@ -1,5 +1,8 @@
-package com.testing.springcloud.persona.error;
+package com.testing.springcloud.common.error;
 
+/**
+ * @author Pedro Lopez
+ */
 @FunctionalInterface
 public interface ProcesarError {
 
