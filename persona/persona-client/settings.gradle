@@ -1,0 +1,5 @@
+rootProject.name = 'persona-client'
+
+include ':persona:persona-core'
+
+project(':persona:persona-core').projectDir = new File('../persona-core')

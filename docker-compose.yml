@@ -3,11 +3,22 @@ version: '3.7'
 services:
   persona-testing:
     build:
-      context: ./persona
+      context: ./persona/persona-api
       dockerfile: Dockerfile
     image: persona-testing:1.0
     ports:
       - 9010:9010
+    depends_on:
+      - eureka
+      - config
+      - zuul
+  archivo-testing:
+    build:
+      context: ./archivo/archivo-api
+      dockerfile: Dockerfile
+    image: archivo-testing:1.0
+    ports:
+      - 9020:9020
     depends_on:
       - eureka
       - config

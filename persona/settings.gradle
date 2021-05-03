@@ -1,5 +1,22 @@
 rootProject.name = 'persona'
-include ':common'
 
+include ':common'
 project(':common').projectDir = new File('../common')
+
+
+include ':persona:persona-api'
+include ':persona:persona-core'
+include ':persona:persona-client'
+
+project(':persona:persona-api').projectDir = new File('./persona-api')
+project(':persona:persona-core').projectDir = new File('./persona-core')
+project(':persona:persona-client').projectDir = new File('./persona-client')
+
+
+
+include ':archivo:archivo-core'
+include ':archivo:archivo-client'
+
+project(':archivo:archivo-core').projectDir = new File('../archivo/archivo-core')
+project(':archivo:archivo-client').projectDir = new File('../archivo/archivo-client')
 

@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+group 'com.testing.springcloud:archivo'
+version '1.0-SNAPSHOT'
+sourceCompatibility = '11'
+targetCompatibility = '11'
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    implementation project(':archivo:archivo-api')
+    implementation project(':archivo:archivo-core')
+    implementation project(':archivo:archivo-client')
+}
+
+test {
+    useJUnitPlatform()
+}

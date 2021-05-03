@@ -1,0 +1,5 @@
+rootProject.name = 'archivo-core'
+
+include ':common'
+
+project(':common').projectDir = new File('../../common')

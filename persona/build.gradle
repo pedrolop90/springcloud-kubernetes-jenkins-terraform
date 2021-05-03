@@ -1,6 +1,4 @@
 plugins {
-    id 'org.springframework.boot' version '2.3.8.RELEASE'
-    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
     id 'application'
 }
 
@@ -9,57 +7,15 @@ version '1.0-SNAPSHOT'
 sourceCompatibility = '11'
 targetCompatibility = '11'
 
-ext {
-    set('springCloudVersion', "Hoxton.SR8")
-    set('nombreClase', 'com.testing.springcloud.persona.PersonaApplication')
-}
-
 repositories {
     mavenCentral()
     jcenter()
 }
 
 dependencies {
-    compileOnly 'org.projectlombok:lombok:1.18.16'
-    annotationProcessor 'org.projectlombok:lombok:1.18.16'
-
-    implementation 'org.mapstruct:mapstruct:1.4.2.Final'
-    annotationProcessor 'org.mapstruct:mapstruct-processor:1.4.2.Final'
-
-    //swagger
-    implementation "io.springfox:springfox-boot-starter:3.0.0"
-    compile "io.springfox:springfox-swagger-ui:3.0.0"
-
-    //spring-boot
-    implementation 'org.springframework.boot:spring-boot-starter-web:2.3.8.RELEASE'
-    implementation 'org.springframework.boot:spring-boot-starter-validation:2.3.8.RELEASE'
-
-    //spring-cloud
-    implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client:2.2.8.RELEASE'
-    implementation 'org.springframework.cloud:spring-cloud-starter-config:2.2.8.RELEASE'
-    implementation 'org.springframework.cloud:spring-cloud-starter-zipkin:2.2.8.RELEASE'
-    implementation 'org.springframework.cloud:spring-cloud-starter-hystrix:1.4.7.RELEASE'
-    implementation 'org.springframework.cloud:spring-cloud-starter-hystrix-dashboard:1.4.7.RELEASE'
-
-
-    //spring-admin
-    implementation 'de.codecentric:spring-boot-admin-starter-client:2.3.1'
-    implementation 'org.springframework.boot:spring-boot-starter-actuator:2.3.8.RELEASE'
-    implementation project(':common')
-
-    //database
-    implementation 'org.springframework.boot:spring-boot-starter-data-jpa:2.3.8.RELEASE'
-    runtime 'com.h2database:h2:1.4.193'
-}
-
-mainClassName = project.ext.nombreClase
-
-apply plugin: "io.spring.dependency-management"
-
-dependencyManagement {
-    imports {
-        mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
-    }
+    implementation project(':persona:persona-api')
+    implementation project(':persona:persona-core')
+    implementation project(':persona:persona-client')
 }
 
 test {

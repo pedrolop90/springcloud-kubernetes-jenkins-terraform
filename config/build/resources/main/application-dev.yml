@@ -9,3 +9,16 @@ spring:
           uri: https://github.com/pedrolop90/testing-springboot-config.git
           default-label: develop
           force-pull: true
+  boot:
+    admin:
+      client:
+        url: http://localhost:8084
+
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: '*'

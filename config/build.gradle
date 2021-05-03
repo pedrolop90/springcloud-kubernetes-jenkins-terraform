@@ -25,6 +25,12 @@ dependencies {
 
     //spring-cloud
     implementation 'org.springframework.cloud:spring-cloud-config-server:2.2.8.RELEASE'
+
+
+    //spring-admin
+    implementation 'de.codecentric:spring-boot-admin-starter-client:2.3.1'
+    implementation 'org.springframework.boot:spring-boot-starter-actuator:2.3.8.RELEASE'
+
 }
 
 mainClassName = project.ext.nombreClase

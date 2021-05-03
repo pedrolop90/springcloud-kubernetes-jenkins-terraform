@@ -1,0 +1,16 @@
+rootProject.name = 'archivo'
+
+include ':common'
+
+project(':common').projectDir = new File('../common')
+
+
+
+include ':archivo:archivo-api'
+include ':archivo:archivo-core'
+include ':archivo:archivo-client'
+
+project(':archivo:archivo-api').projectDir = new File('./archivo-api')
+project(':archivo:archivo-core').projectDir = new File('./archivo-core')
+project(':archivo:archivo-client').projectDir = new File('./archivo-client')
+

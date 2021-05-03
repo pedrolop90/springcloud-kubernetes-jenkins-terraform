@@ -1,9 +1,8 @@
 package com.testing.springcloud.common.dto;
 
-import lombok.Data;
+public interface IdEntidad<ID> {
 
-@Data
-public class IdEntidad<ID> {
+	ID getId();
 
-	private ID id;
+	void setId(ID id);
 }

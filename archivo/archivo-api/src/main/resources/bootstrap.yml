@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: archivo-testing
+  cloud:
+    config:
+      uri: http://localhost:8888
+  profiles:
+    active: dev

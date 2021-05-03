@@ -1,17 +1,22 @@
 package com.testing.springcloud.common.respuesta;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.http.HttpStatus;
 
+import java.io.Serializable;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 @Getter
 @Setter
-public class ListaObjetoRespuesta<T> extends RespuestaBase {
+@NoArgsConstructor
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class ListaObjetoRespuesta<T> extends RespuestaBase implements Serializable {
 	private long cantidad;
 	private List<T> datos;
 
